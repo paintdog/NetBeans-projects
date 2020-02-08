@@ -21,3 +21,17 @@
 
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
+/NumberAddition/.gradle/
+/NumberAddition/build/
+/Hallo Welt/HalloWelt/nbproject/private/
+/Hallo Welt/HalloWelt/build/
+/Hallo Welt/HalloWeltGUI/nbproject/private/
+/Hallo Welt/HalloWeltGUI/build/
+/Hallo Welt/HalloWeltGUI/dist/
+/HalloWeltGUI/build/
+/HalloWeltGUI/dist/
+/HalloWeltGUI/nbproject/private/
+/HalloWelt/build/
+/HalloWelt/nbproject/private/
+/NotenApp/nbproject/private/
+/NotenApp/build/
