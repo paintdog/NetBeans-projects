@@ -46,6 +46,9 @@ public class Noten {
     
     public double bilde_zwischennote() {
         int summe = 0;
+        if (notenliste.length == 0) {
+            return Double.NaN;
+        }        
         for (int i = 0; i < notenliste.length; i++) {
             summe = summe + notenliste[i];
         }
