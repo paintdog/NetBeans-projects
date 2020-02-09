@@ -38,3 +38,6 @@ hs_err_pid*
 /NotenApp/dist/
 /BMIApp/BMIApp/nbproject/private/
 /BMIApp/BMIApp/build/
+/BMIApp/AnagramGame/nbproject/private/
+/BMIApp/AnagramGame/build/
+/GUIFormExamples/nbproject/private/
