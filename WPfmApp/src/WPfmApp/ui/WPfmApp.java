@@ -292,7 +292,7 @@ public class WPfmApp extends javax.swing.JFrame {
         nachweis = nachweis + "|autor=" + author;
         nachweis = nachweis + "|url=" + url;
         nachweis = nachweis + "|titel=" + title;
-        nachweis = nachweis + "|werk=Finance (Magazin)";
+        nachweis = nachweis + "|werk=[[Finance (Magazin)]]";
         nachweis = nachweis + "|datum=" + date;
         nachweis = nachweis + "|abruf=" + today2();
         nachweis = nachweis + "}}";
