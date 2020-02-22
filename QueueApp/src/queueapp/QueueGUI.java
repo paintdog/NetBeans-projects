@@ -94,6 +94,7 @@ public class QueueGUI extends javax.swing.JFrame {
 
         jTextArea2.setColumns(10);
         jTextArea2.setRows(5);
+        jTextArea2.setToolTipText("");
         jTextArea2.setWrapStyleWord(true);
         jScrollPane4.setViewportView(jTextArea2);
 
@@ -185,7 +186,10 @@ public class QueueGUI extends javax.swing.JFrame {
             jLabel_isEmpty.setText("Nein");
         }
     }//GEN-LAST:event_jButton_isEmptyActionPerformed
-
+    
+    /*
+     * Ermöglicht es, ein Element aus der Schlange zu entnehmen.
+     */
     private void jButton_dequeueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_dequeueActionPerformed
         System.out.println(queue.isEmpty());
         if (queue.isEmpty() == true) {
@@ -208,7 +212,11 @@ public class QueueGUI extends javax.swing.JFrame {
             }
             System.out.println(new_value);
             jTextArea1.setText(new_value);
-            jTextArea2.setText(jTextArea2.getText() + "\n" + value);
+            if (jTextArea2.getText().equals("")) {
+                jTextArea2.setText(value);
+            } else {
+                jTextArea2.setText(jTextArea2.getText() + "\n" + value);
+            }
         }
     }//GEN-LAST:event_jButton_dequeueActionPerformed
 
