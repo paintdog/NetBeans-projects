@@ -3,22 +3,22 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package stackapp;
+package queueapp;
 
-import abiturklassen.listenklassen.Stack;
+import abiturklassen.listenklassen.Queue;
 
 /**
  *
  * @author Paintdog
  */
-public class StackGUI extends javax.swing.JFrame {
+public class QueueGUI extends javax.swing.JFrame {
     
-    private Stack<String> stack = new Stack<String>();
+    private Queue<String> queue = new Queue<String>();
     
     /**
      * Creates new form StackGUI
      */
-    public StackGUI() {
+    public QueueGUI() {
         initComponents();
     }
 
@@ -44,6 +44,8 @@ public class StackGUI extends javax.swing.JFrame {
         jTextArea1 = new javax.swing.JTextArea();
         jScrollPane4 = new javax.swing.JScrollPane();
         jTextArea2 = new javax.swing.JTextArea();
+        jLabel_dequeue = new javax.swing.JLabel();
+        jLabel_front = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setResizable(false);
@@ -65,7 +67,7 @@ public class StackGUI extends javax.swing.JFrame {
             }
         });
 
-        jButton_dequeue.setText("equeue()");
+        jButton_dequeue.setText("dequeue()");
         jButton_dequeue.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 jButton_dequeueActionPerformed(evt);
@@ -95,6 +97,10 @@ public class StackGUI extends javax.swing.JFrame {
         jTextArea2.setWrapStyleWord(true);
         jScrollPane4.setViewportView(jTextArea2);
 
+        jLabel_dequeue.setText(" ");
+
+        jLabel_front.setText(" ");
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -102,35 +108,43 @@ public class StackGUI extends javax.swing.JFrame {
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(layout.createSequentialGroup()
+                        .addComponent(jLabel_isEmpty, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jTextField_enqueue, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
+                                .addGap(6, 6, 6)
+                                .addComponent(jLabel_pop, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 161, Short.MAX_VALUE))
+                            .addGroup(layout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel_dequeue, javax.swing.GroupLayout.PREFERRED_SIZE, 107, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jLabel_front, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
+                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                            .addComponent(jScrollPane3)
+                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
                                 .addComponent(jButton_isEmpty, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButton_enqueue)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jButton_dequeue)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jLabel_top, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jButton_front, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                                .addComponent(jButton_enqueue)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(layout.createSequentialGroup()
-                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(jScrollPane3)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, layout.createSequentialGroup()
-                                        .addComponent(jLabel_isEmpty, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(jTextField_enqueue, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addGap(6, 6, 6)
+                                .addComponent(jButton_dequeue, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 198, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel_pop, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                                    .addGroup(layout.createSequentialGroup()
+                                        .addComponent(jLabel_top, javax.swing.GroupLayout.PREFERRED_SIZE, 91, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addGap(0, 30, Short.MAX_VALUE))
+                                    .addComponent(jButton_front, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                            .addComponent(jScrollPane4))))
                 .addContainerGap())
         );
 
-        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jButton_dequeue, jButton_enqueue, jButton_front, jButton_isEmpty});
+        layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jButton_enqueue, jButton_isEmpty});
 
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -148,7 +162,9 @@ public class StackGUI extends javax.swing.JFrame {
                     .addComponent(jLabel_isEmpty, javax.swing.GroupLayout.PREFERRED_SIZE, 19, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jTextField_enqueue, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel_pop)
-                    .addComponent(jLabel_top))
+                    .addComponent(jLabel_top)
+                    .addComponent(jLabel_dequeue)
+                    .addComponent(jLabel_front))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jScrollPane3, javax.swing.GroupLayout.DEFAULT_SIZE, 147, Short.MAX_VALUE)
@@ -162,8 +178,8 @@ public class StackGUI extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButton_isEmptyActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_isEmptyActionPerformed
-        System.out.println(stack.isEmpty());
-        if (stack.isEmpty() == true) {
+        System.out.println(queue.isEmpty());
+        if (queue.isEmpty() == true) {
             jLabel_isEmpty.setText("Ja");
         } else {
             jLabel_isEmpty.setText("Nein");
@@ -171,14 +187,14 @@ public class StackGUI extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton_isEmptyActionPerformed
 
     private void jButton_dequeueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_dequeueActionPerformed
-        System.out.println(stack.isEmpty());
-        if (stack.isEmpty() == true) {
-            jLabel_pop.setText("Stapel ist leer!");
+        System.out.println(queue.isEmpty());
+        if (queue.isEmpty() == true) {
+            jLabel_dequeue.setText("Schlange ist leer!");
         } else {
-            String value = stack.top();
+            String value = queue.front();
             System.out.println(value);
-            stack.pop();
-            jLabel_pop.setText(value);
+            queue.dequeue();
+            jLabel_dequeue.setText(value);
             String values = jTextArea1.getText();
             String[] liste = values.split("\n");
             String new_value = "";
@@ -192,24 +208,31 @@ public class StackGUI extends javax.swing.JFrame {
             }
             System.out.println(new_value);
             jTextArea1.setText(new_value);
-            jTextArea2.setText(value + "\n" + jTextArea2.getText());
+            jTextArea2.setText(jTextArea2.getText() + "\n" + value);
         }
     }//GEN-LAST:event_jButton_dequeueActionPerformed
 
     private void jButton_frontActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_frontActionPerformed
-        System.out.println(stack.isEmpty());
-        if (stack.isEmpty() == true) {
-            jLabel_top.setText("Stapel ist leer!");
+        System.out.println(queue.isEmpty());
+        if (queue.isEmpty() == true) {
+            jLabel_front.setText("Schlange ist leer!");
         } else {
-            jLabel_top.setText(stack.top());
+            jLabel_front.setText(queue.front());
         }
     }//GEN-LAST:event_jButton_frontActionPerformed
 
     private void jButton_enqueueActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton_enqueueActionPerformed
         System.out.println("Füge neues Element hinzu...");
         String new_entry = jTextField_enqueue.getText();
-        stack.push(new_entry);
-        jTextArea1.setText(new_entry + "\n" + jTextArea1.getText());
+        queue.enqueue(new_entry);
+        String old_entry = jTextArea1.getText();
+        System.out.println("Alter Eintrag: " + old_entry);
+        if (old_entry.equals("")) {
+            jTextArea1.setText(new_entry);
+        } else {
+            jTextArea1.setText(old_entry + "\n" + new_entry);
+        }
+        
         
     }//GEN-LAST:event_jButton_enqueueActionPerformed
 
@@ -230,20 +253,21 @@ public class StackGUI extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(StackGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(QueueGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(StackGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(QueueGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(StackGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(QueueGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(StackGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(QueueGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new StackGUI().setVisible(true);
+                new QueueGUI().setVisible(true);
             }
         });
     }
@@ -254,6 +278,8 @@ public class StackGUI extends javax.swing.JFrame {
     private javax.swing.JButton jButton_front;
     private javax.swing.JButton jButton_isEmpty;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel_dequeue;
+    private javax.swing.JLabel jLabel_front;
     private javax.swing.JLabel jLabel_isEmpty;
     private javax.swing.JLabel jLabel_pop;
     private javax.swing.JLabel jLabel_top;

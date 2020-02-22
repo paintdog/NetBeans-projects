@@ -28,29 +28,37 @@
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" attributes="0">
                   <Component id="jLabel2" max="32767" attributes="0"/>
-                  <Group type="102" alignment="0" attributes="0">
-                      <Component id="jLabel_isEmpty" min="-2" pref="85" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jTextField_push" min="-2" pref="87" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
-                      <Component id="jLabel_pop" min="-2" pref="85" max="-2" attributes="0"/>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <Component id="jButton_isEmpty" linkSize="1" min="-2" pref="85" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jButton_push" linkSize="1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jButton_pop" linkSize="1" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                          <Component id="jLabel_top" max="32767" attributes="0"/>
-                          <Component id="jButton_top" linkSize="1" max="32767" attributes="0"/>
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="jButton_isEmpty" linkSize="1" min="-2" pref="85" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jButton_enqueue" linkSize="1" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="jButton_dequeue" linkSize="1" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                  <Component id="jLabel_top" max="32767" attributes="0"/>
+                                  <Component id="jButton_front" linkSize="1" max="32767" attributes="0"/>
+                              </Group>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                  <Component id="jScrollPane3" max="32767" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="jLabel_isEmpty" min="-2" pref="85" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="jTextField_enqueue" min="-2" pref="87" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace min="-2" pref="6" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="jScrollPane4" min="-2" pref="198" max="-2" attributes="0"/>
+                                  <Component id="jLabel_pop" min="-2" pref="85" max="-2" attributes="0"/>
+                              </Group>
+                          </Group>
                       </Group>
-                  </Group>
-                  <Group type="102" alignment="0" attributes="0">
-                      <Component id="jScrollPane3" min="-2" pref="174" max="-2" attributes="0"/>
-                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
-                      <Component id="jScrollPane4" min="-2" pref="176" max="-2" attributes="0"/>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
                   </Group>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
@@ -65,14 +73,14 @@
               <EmptySpace type="unrelated" max="-2" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jButton_isEmpty" linkSize="2" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
-                  <Component id="jButton_push" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jButton_pop" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
-                  <Component id="jButton_top" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jButton_enqueue" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jButton_dequeue" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jButton_front" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
               <EmptySpace max="32767" attributes="0"/>
               <Group type="103" groupAlignment="3" attributes="0">
                   <Component id="jLabel_isEmpty" alignment="3" min="-2" pref="19" max="-2" attributes="0"/>
-                  <Component id="jTextField_push" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jTextField_enqueue" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel_pop" alignment="3" min="-2" max="-2" attributes="0"/>
                   <Component id="jLabel_top" alignment="3" min="-2" max="-2" attributes="0"/>
               </Group>
@@ -92,7 +100,7 @@
         <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
           <Font name="Times New Roman" size="24" style="0"/>
         </Property>
-        <Property name="text" type="java.lang.String" value="Stapel (Stack)-Anwendung"/>
+        <Property name="text" type="java.lang.String" value="Schlange (Queue)-Anwendung"/>
       </Properties>
     </Component>
     <Component class="javax.swing.JButton" name="jButton_isEmpty">
@@ -103,28 +111,28 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton_isEmptyActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton_push">
+    <Component class="javax.swing.JButton" name="jButton_enqueue">
       <Properties>
-        <Property name="text" type="java.lang.String" value="push()"/>
+        <Property name="text" type="java.lang.String" value="enqueue()"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton_pushActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton_enqueueActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton_pop">
+    <Component class="javax.swing.JButton" name="jButton_dequeue">
       <Properties>
-        <Property name="text" type="java.lang.String" value="pop()"/>
+        <Property name="text" type="java.lang.String" value="equeue()"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton_popActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton_dequeueActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="jButton_top">
+    <Component class="javax.swing.JButton" name="jButton_front">
       <Properties>
-        <Property name="text" type="java.lang.String" value="top()"/>
+        <Property name="text" type="java.lang.String" value="front()"/>
       </Properties>
       <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton_topActionPerformed"/>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton_frontActionPerformed"/>
       </Events>
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel_isEmpty">
@@ -132,7 +140,7 @@
         <Property name="horizontalAlignment" type="int" value="0"/>
       </Properties>
     </Component>
-    <Component class="javax.swing.JTextField" name="jTextField_push">
+    <Component class="javax.swing.JTextField" name="jTextField_enqueue">
     </Component>
     <Component class="javax.swing.JLabel" name="jLabel_pop">
       <Properties>

@@ -46,3 +46,6 @@ hs_err_pid*
 /WPfmApp/dist/
 /VokabelTrainerApp/nbproject/private/
 /VokabelTrainerApp/build/
+/StackApp/dist/
+/QueueApp/nbproject/private/
+/QueueApp/build/
