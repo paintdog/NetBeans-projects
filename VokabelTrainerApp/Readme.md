@@ -8,4 +8,4 @@ Die App selbst soll sich das Spaced repetition-Verfahren zu Nutze machen. Es han
 
 ![Schaubild zur Lernkartei-Methode (Spaced repetition)](https://github.com/paintdog/NetBeans-projects/blob/master/VokabelTrainerApp/Schaubild.png)
 
-Die verwendeten Icons stammen aus dem (Tango Projekt)[https://commons.wikimedia.org/wiki/Tango_icons] und sind  laut Beschreibungsseite auf Commons gemeinfrei.
+Die verwendeten Icons stammen aus dem [Tango Projekt](https://commons.wikimedia.org/wiki/Tango_icons) und sind  laut Beschreibungsseite auf Commons gemeinfrei.
