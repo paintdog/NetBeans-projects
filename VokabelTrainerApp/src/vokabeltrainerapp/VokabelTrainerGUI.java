@@ -7,10 +7,11 @@ package vokabeltrainerapp;
 
 /**
  *
- * @author resch
+ * @author Paintdog
  */
 public class VokabelTrainerGUI extends javax.swing.JFrame {
-
+    
+    protected Boolean immerImVordergrund;
     /**
      * Creates new form VokabelTrainerGUI
      */
@@ -27,150 +28,156 @@ public class VokabelTrainerGUI extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel2 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        jToggleButton2 = new javax.swing.JToggleButton();
-        jLabel3 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
+        jCheckBox1 = new javax.swing.JCheckBox();
+        jPanel1 = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
+        jLabel2 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTextArea2 = new javax.swing.JTextArea();
-        jPanel1 = new javax.swing.JPanel();
         jButton1 = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
         jButton3 = new javax.swing.JButton();
-        jProgressBar1 = new javax.swing.JProgressBar();
-        jLabel1 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
+        jButton4 = new javax.swing.JButton();
+        jPanel2 = new javax.swing.JPanel();
         jMenuBar1 = new javax.swing.JMenuBar();
         jMenu1 = new javax.swing.JMenu();
-        jMenu3 = new javax.swing.JMenu();
-        jMenuItem2 = new javax.swing.JMenuItem();
-        jSeparator1 = new javax.swing.JPopupMenu.Separator();
         jMenuItem1 = new javax.swing.JMenuItem();
         jMenu2 = new javax.swing.JMenu();
-        jMenuItem3 = new javax.swing.JMenuItem();
-        jMenuItem4 = new javax.swing.JMenuItem();
-        jMenuItem5 = new javax.swing.JMenuItem();
-        jMenuItem6 = new javax.swing.JMenuItem();
-        jMenuItem7 = new javax.swing.JMenuItem();
-
-        jLabel2.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
-        jLabel2.setText("Vokabel");
-        jLabel2.setVerticalAlignment(javax.swing.SwingConstants.TOP);
-
-        jLabel5.setText("jLabel5");
-
-        jToggleButton2.setText("jToggleButton2");
+        jMenuItem2 = new javax.swing.JMenuItem();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setTitle("VokabelTrainer");
-        setResizable(false);
+        setTitle("VokabelTrainerApp");
+        setForeground(java.awt.Color.lightGray);
+        setLocation(new java.awt.Point(400, 400));
+        setMinimumSize(new java.awt.Dimension(800, 600));
+        addWindowListener(new java.awt.event.WindowAdapter() {
+            public void windowClosed(java.awt.event.WindowEvent evt) {
+                formWindowClosed(evt);
+            }
+            public void windowOpened(java.awt.event.WindowEvent evt) {
+                formWindowOpened(evt);
+            }
+        });
 
-        jLabel3.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
-        jLabel3.setText("Vokabel");
+        jCheckBox1.setSelected(true);
+        jCheckBox1.setText("im Vordergrund halten");
+        jCheckBox1.setFocusable(false);
+        jCheckBox1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jCheckBox1ActionPerformed(evt);
+            }
+        });
 
-        jLabel4.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
-        jLabel4.setText("Bedeutung");
+        jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+
+        jLabel1.setText("Vokabel");
 
         jTextArea1.setColumns(20);
-        jTextArea1.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
-        jTextArea1.setLineWrap(true);
         jTextArea1.setRows(5);
-        jTextArea1.setText("Vokabel");
         jTextArea1.setFocusable(false);
+        jTextArea1.setMaximumSize(new java.awt.Dimension(2147483647, 500));
+        jTextArea1.setMinimumSize(new java.awt.Dimension(0, 50));
         jScrollPane1.setViewportView(jTextArea1);
 
+        jLabel2.setText("Bedeutung");
+
         jTextArea2.setColumns(20);
-        jTextArea2.setFont(new java.awt.Font("Dialog", 0, 24)); // NOI18N
-        jTextArea2.setLineWrap(true);
         jTextArea2.setRows(5);
-        jTextArea2.setText("Bedeutung der Vokabel");
         jTextArea2.setFocusable(false);
+        jTextArea2.setMinimumSize(new java.awt.Dimension(0, 100));
         jScrollPane2.setViewportView(jTextArea2);
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jButton1.setText("Start");
+        jButton1.setFocusable(false);
+
+        jButton2.setText("Richtig");
+
+        jButton3.setText("Falsch");
+
+        jButton4.setText("Aufdecken");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jScrollPane1)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 1674, Short.MAX_VALUE)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jButton4)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jButton2)
+                        .addGap(12, 12, 12)
+                        .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 120, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
         );
+
+        jPanel1Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jButton1, jButton2});
+
+        jPanel1Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jButton3, jButton4});
+
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 79, Short.MAX_VALUE)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(jLabel1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 253, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(jLabel2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 609, Short.MAX_VALUE)
+                .addGap(18, 18, 18)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jButton4)
+                    .addComponent(jButton2)
+                    .addComponent(jButton3))
+                .addContainerGap())
         );
 
-        jButton1.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
-        jButton1.setText("Aufdecken");
-        jButton1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton1ActionPerformed(evt);
-            }
-        });
+        jPanel1Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jButton1, jButton2, jButton3, jButton4});
 
-        jButton2.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
-        jButton2.setText("Richtig");
+        jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel2.setMaximumSize(new java.awt.Dimension(300, 32767));
+        jPanel2.setMinimumSize(new java.awt.Dimension(300, 100));
 
-        jButton3.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
-        jButton3.setText("Falsch");
-
-        jLabel1.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
-        jLabel1.setText("0");
-
-        jLabel6.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
-        jLabel6.setText("Kategorie");
-
-        jMenuBar1.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 304, Short.MAX_VALUE)
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
 
         jMenu1.setText("File");
-        jMenu1.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
 
-        jMenu3.setText("Lektion laden");
-        jMenu3.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
-
-        jMenuItem2.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
-        jMenuItem2.setText("Lektion 2");
-        jMenu3.add(jMenuItem2);
-
-        jMenu1.add(jMenu3);
-        jMenu1.add(jSeparator1);
-
-        jMenuItem1.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
-        jMenuItem1.setText("Beenden");
+        jMenuItem1.setText("Exit");
+        jMenuItem1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jMenuItem1ActionPerformed(evt);
+            }
+        });
         jMenu1.add(jMenuItem1);
 
         jMenuBar1.add(jMenu1);
 
-        jMenu2.setText("Training");
-        jMenu2.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
+        jMenu2.setText("Help");
 
-        jMenuItem3.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
-        jMenuItem3.setText("Kategorie 5");
-        jMenu2.add(jMenuItem3);
-
-        jMenuItem4.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
-        jMenuItem4.setText("Kategorie 4");
-        jMenu2.add(jMenuItem4);
-
-        jMenuItem5.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
-        jMenuItem5.setText("Kategorie 3");
-        jMenuItem5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jMenuItem5ActionPerformed(evt);
-            }
-        });
-        jMenu2.add(jMenuItem5);
-
-        jMenuItem6.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
-        jMenuItem6.setText("Kategorie 2");
-        jMenu2.add(jMenuItem6);
-
-        jMenuItem7.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
-        jMenuItem7.setText("Kategorie 1");
-        jMenu2.add(jMenuItem7);
+        jMenuItem2.setText("About");
+        jMenu2.add(jMenuItem2);
 
         jMenuBar1.add(jMenu2);
 
@@ -180,68 +187,56 @@ public class VokabelTrainerGUI extends javax.swing.JFrame {
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(layout.createSequentialGroup()
-                .addGap(27, 27, 27)
+                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel3)
-                    .addComponent(jLabel4)
-                    .addComponent(jLabel6))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jScrollPane1)
-                        .addComponent(jScrollPane2)
-                        .addGroup(layout.createSequentialGroup()
-                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 170, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 102, Short.MAX_VALUE)
-                            .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                            .addComponent(jButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 160, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addComponent(jProgressBar1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(jCheckBox1)
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(layout.createSequentialGroup()
-                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(27, 27, 27)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                .addContainerGap()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel3)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(24, 24, 24)
-                        .addComponent(jLabel4))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 197, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(18, 18, 18)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(jButton1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jButton2))
-                    .addComponent(jButton3))
-                .addGap(35, 35, 35)
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel1)
-                    .addComponent(jLabel6))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 38, Short.MAX_VALUE)
-                .addComponent(jProgressBar1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(32, 32, 32))
+                .addComponent(jCheckBox1)
+                .addContainerGap())
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jButton1ActionPerformed
+    private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
+        setAlwaysOnTop(true);
+        immerImVordergrund = true;
+    }//GEN-LAST:event_formWindowOpened
 
-    private void jMenuItem5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem5ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jMenuItem5ActionPerformed
+    private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
+        if (immerImVordergrund == true) {
+            setAlwaysOnTop(false);
+            immerImVordergrund = false;
+        } else {
+            setAlwaysOnTop(true);
+            immerImVordergrund = true;
+        }
+    }//GEN-LAST:event_jCheckBox1ActionPerformed
+
+    private void formWindowClosed(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowClosed
+        System.out.println("Ereignis formWindowClosed ausgelöst");
+        System.exit(0);   // beendet die Anwendung
+    }//GEN-LAST:event_formWindowClosed
+
+    private void jMenuItem1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jMenuItem1ActionPerformed
+        System.out.println("Menü 'Beenden' geklickt.");
+        System.exit(0);   // beendet die Anwendung
+    }//GEN-LAST:event_jMenuItem1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -282,30 +277,20 @@ public class VokabelTrainerGUI extends javax.swing.JFrame {
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
     private javax.swing.JButton jButton3;
+    private javax.swing.JButton jButton4;
+    private javax.swing.JCheckBox jCheckBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
-    private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JMenu jMenu1;
     private javax.swing.JMenu jMenu2;
-    private javax.swing.JMenu jMenu3;
     private javax.swing.JMenuBar jMenuBar1;
     private javax.swing.JMenuItem jMenuItem1;
     private javax.swing.JMenuItem jMenuItem2;
-    private javax.swing.JMenuItem jMenuItem3;
-    private javax.swing.JMenuItem jMenuItem4;
-    private javax.swing.JMenuItem jMenuItem5;
-    private javax.swing.JMenuItem jMenuItem6;
-    private javax.swing.JMenuItem jMenuItem7;
     private javax.swing.JPanel jPanel1;
-    private javax.swing.JProgressBar jProgressBar1;
+    private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JPopupMenu.Separator jSeparator1;
     private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextArea jTextArea2;
-    private javax.swing.JToggleButton jToggleButton2;
     // End of variables declaration//GEN-END:variables
 }
