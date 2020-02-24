@@ -5,6 +5,8 @@
  */
 package vokabeltrainerapp;
 
+import javax.swing.ImageIcon;
+
 /**
  *
  * @author Paintdog
@@ -12,6 +14,7 @@ package vokabeltrainerapp;
 public class VokabelTrainerGUI extends javax.swing.JFrame {
     
     protected Boolean immerImVordergrund;
+    
     /**
      * Creates new form VokabelTrainerGUI
      */
@@ -119,6 +122,11 @@ public class VokabelTrainerGUI extends javax.swing.JFrame {
         jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/60px-Go-next.svg.png"))); // NOI18N
         jButton1.setText("Start");
         jButton1.setFocusable(false);
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
 
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/pics/60px-Dialog-accept.svg.png"))); // NOI18N
         jButton2.setText("Richtig");
@@ -180,7 +188,7 @@ public class VokabelTrainerGUI extends javax.swing.JFrame {
                 .addGap(18, 18, 18)
                 .addComponent(jLabel2)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 599, Short.MAX_VALUE)
+                .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 684, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -437,6 +445,9 @@ public class VokabelTrainerGUI extends javax.swing.JFrame {
     private void formWindowOpened(java.awt.event.WindowEvent evt) {//GEN-FIRST:event_formWindowOpened
         setAlwaysOnTop(true);
         immerImVordergrund = true;
+                
+        ImageIcon img = new ImageIcon(getClass().getResource("/pics/60px-System-file-manager.svg.png"));
+        setIconImage(img.getImage());
     }//GEN-LAST:event_formWindowOpened
 
     private void jCheckBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jCheckBox1ActionPerformed
@@ -470,6 +481,10 @@ public class VokabelTrainerGUI extends javax.swing.JFrame {
     private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
         jButton4.requestFocus();
     }//GEN-LAST:event_jButton3ActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton1ActionPerformed
 
     /**
      * @param args the command line arguments
