@@ -8,7 +8,7 @@ Die verwendeten Icons stammen aus dem [Tango Projekt](https://commons.wikimedia.
 
 ## Vokabeln
 
-Beim Langenscheidt Vokabeltrainer habe ich auf einer [separaten Seite](http://www.vokabeln.de/v7/download.htm) eine ganze Fülle von Vokabellisten zum Download gefunden (Stand: 2020-02-25), ein eigener Copyright-Hinweis ist dort beigefügt. Beim Paket „[](http://www.vokabeln.de/v7/vorschau/Latein_Schule.htm)“ findet sich der Hinweis: „Die Inhalte sind frei verwendbar, dürfen in jeder Form kopiert und weitergegeben werden.“ (Stand: 2020-02-25).
+Beim Langenscheidt Vokabeltrainer habe ich auf einer [separaten Seite](http://www.vokabeln.de/v7/download.htm) eine ganze Fülle von Vokabellisten zum Download gefunden (Stand: 2020-02-25), ein eigener Copyright-Hinweis ist dort beigefügt. Beim Paket „[Latein - Schule](http://www.vokabeln.de/v7/vorschau/Latein_Schule.htm)“ findet sich der Hinweis: „Die Inhalte sind frei verwendbar, dürfen in jeder Form kopiert und weitergegeben werden.“ (Stand: 2020-02-25).
 
 ## Spaced repetition-Methode
 
