@@ -52,3 +52,6 @@ hs_err_pid*
 /QueueApp/dist/
 /VokabelTrainerApp/VokabelTrainerApp/nbproject/private/
 /VokabelTrainerApp/dist/
+/FileReaderWriterApp/nbproject/private/
+/FileReaderWriterApp/build/
+/FileReaderWriterApp/dist/
