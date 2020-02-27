@@ -31,7 +31,9 @@ public class Cars {
             cars_temp[i] = cars[i];
         }
         cars_temp[cars.length] = car;
+        // notwendiger Schritt, um cars auf die richtige Länge zu bringen
         cars = new String[cars_temp.length];
+        // erst hiernach kann cars die Elemente aus cars_temp aufnehmen
         cars = cars_temp;
     }
     
